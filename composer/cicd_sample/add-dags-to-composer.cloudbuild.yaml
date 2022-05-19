@@ -17,7 +17,7 @@ steps:
   # install dependencies
   - name: python
     entrypoint: pip
-    args: ["install", "-r", "utils/requirements.txt", "--user"]
+    args: ["install", "-r", "/composer/cicd_sample/utils/requirements.txt", "--user"]
 
   # run
   - name: python
