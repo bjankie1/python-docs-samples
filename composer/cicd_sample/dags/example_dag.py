@@ -39,6 +39,8 @@ with models.DAG(
     schedule_interval=datetime.timedelta(days=1),
 ) as dag:
 
+    """Small change"""
+
     # Print the dag_run id from the Airflow logs
     print_dag_run_conf = bash.BashOperator(
         task_id="print_dag_run_conf", bash_command="echo {{ dag_run.id }}"
