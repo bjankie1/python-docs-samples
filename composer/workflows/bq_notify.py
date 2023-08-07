@@ -83,9 +83,7 @@ MOST_POPULAR_QUERY = f"""
         LIMIT 1
         """
 
-yesterday = datetime.datetime.combine(
-    datetime.datetime.today() - datetime.timedelta(1), datetime.datetime.min.time()
-)
+yesterday = {{ yesterday_ds_nodash }}
 
 # [START composer_notify_failure]
 default_dag_args = {
